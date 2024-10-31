@@ -1,5 +1,5 @@
-let res = document.querySelector("#res");
-
-res.addEventListener("click", () => {
-    res.innerText="hello";
-});
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for your message!');
+  });
+  
