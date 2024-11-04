@@ -1,3 +1,4 @@
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,20 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f9fc;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+:root {
+  --primary-color: #3a8ad8;
+  --secondary-color: #5fa8d3;
+  --text-color: #333;
+  --light-text-color: #555;
+  --background-color: #f7f9fc;
 }
 
 .resume-container {
@@ -18,15 +27,23 @@ body {
   background-color: white;
   padding: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
+/* Hidden class for delay effect */
+.hidden {
+  display: none;
+}
+
+/* Header Styles */
 .header {
-  background-color: #5fa8d3;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
   color: white;
   display: flex;
   align-items: center;
   padding: 20px;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .profile-picture img {
@@ -51,12 +68,12 @@ body {
 }
 
 .portfolio {
-  margin-top: 10px; /* Added margin for spacing */
+  margin-top: 10px;
 }
 
 .portfolio p {
   font-size: 1rem;
-  color: white; /* Ensure text color contrasts against the header background */
+  color: white;
 }
 
 .follow-me {
@@ -76,22 +93,25 @@ body {
 .social-links a {
   color: white;
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .social-links a:hover {
-  text-decoration: underline;
+  transform: scale(1.2);
 }
 
+/* Profile Summary Styles */
 .profile-summary h3 {
   font-size: 1.25rem;
   margin-bottom: 10px;
+  color: var(--secondary-color);
 }
 
 .profile-summary p {
   font-size: 1rem;
-  color: #555;
+  color: var(--text-color);
   line-height: 1.6;
 }
 
@@ -106,28 +126,30 @@ body {
   width: 48%;
 }
 
+/* Section Styles */
 section {
   margin-bottom: 30px;
 }
 
 h3 {
   font-size: 1.125rem;
-  color: #333;
+  color: var(--primary-color);
   margin-bottom: 10px;
-  border-bottom: 2px solid #5fa8d3;
+  border-bottom: 2px solid var(--secondary-color);
   padding-bottom: 5px;
 }
 
 h4 {
   display: inline-block;
 }
+
 .education p,
 .skills ul,
 .work-experience p,
 .languages p,
 .contacts p {
   font-size: 1rem;
-  color: #555;
+  color: var(--light-text-color);
 }
 
 .skills ul {
@@ -142,24 +164,24 @@ h4 {
 /* Progress Bar Styles */
 @keyframes progress-animation {
   0% {
-    width: 0;
+      width: 0;
   }
   100% {
-    width: 70%; /* Adjust as needed */
+      width: 70%; /* Adjust as needed */
   }
 }
 
 .progress-bar {
   background-color: #e0e0e0;
   border-radius: 20px;
-  margin-bottom: 10px;
-  height: 30px; /* Increased height for better visibility */
   overflow: hidden;
   position: relative;
+  margin-bottom: 10px;
+  height: 30px; /* Adjust height as needed */
 }
 
 .progress {
-  background-color: #5fa8d3;
+  background-color: var(--primary-color); /* Updated color */
   color: white;
   font-weight: bold;
   line-height: 30px; /* Align text vertically in the middle */
@@ -170,47 +192,62 @@ h4 {
   top: 0;
   left: 0;
   height: 100%;
-  width: 70%; /* This should be adjusted based on progress */
   animation: progress-animation 2s ease-out; /* Apply the animation */
 }
 
+/* Contact Styles */
 .contacts a {
   text-decoration: none;
-  color: #5fa8d3;
+  color: var(--primary-color); /* Updated color */
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .contacts a:hover {
-  text-decoration: underline;
+  color: var(--secondary-color); /* Updated color */
+}
+
+/* Projects Animation */
+.project-link {
+  display: inline-block;
+  color: var(--primary-color); /* Updated color */
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.project-link:hover {
+  transform: scale(1.1);
+  color: var(--secondary-color); /* Updated color */
 }
 
 /* Responsive Design */
 @media (max-width: 900px) {
   .resume-container {
-    width: 95%;
-    padding: 15px;
+      width: 95%;
+      padding: 15px;
   }
 
   .left-column,
   .right-column {
-    width: 100%;
-    display: block;
+      width: 100%;
+      display: block;
   }
 
   .content {
-    flex-direction: column;
-    gap: 2%;
+      flex-direction: column;
+      gap: 2%;
   }
 
   .header-info h1 {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 
   .header-info h2 {
-    font-size: 1rem;
+      font-size: 1rem;
   }
 
   .social-links a {
-    font-size: 0.8rem;
+      font-size: 0.8rem;
   }
 }
