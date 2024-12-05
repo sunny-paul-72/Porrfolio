@@ -202,7 +202,11 @@ h3 {
   box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066;
 }
 
-/* Social links */
+.mail {
+  color: violet;
+}
+
+
 /* Social Links */
 .social-links {
   display: flex;
