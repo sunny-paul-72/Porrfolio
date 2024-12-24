@@ -30,6 +30,11 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+p {
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
 .resume-container:hover {
   transform: translateY(-10px);
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
@@ -155,6 +160,11 @@ h3 {
   color: #ff0066;
 }
 
+li {
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+
 /* Progress Bar */
 .progress-bar {
   background-color: #444;
@@ -166,7 +176,7 @@ h3 {
 
 .progress {
   background: linear-gradient(90deg, #00ffcc, #ff0066);
-  color: white;
+  color: black;
   font-weight: bold;
   line-height: 25px;
   text-align: left;
@@ -204,6 +214,7 @@ h3 {
 
 .mail {
   color: violet;
+  text-decoration: underline;
 }
 
 
